@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+/* global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.row,
+.padding,
+.col-xs-12,
+.col-sm-6,
+.col-lg-6,
+.col-xl-6 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#taiwan-info {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+section.container-fluid,
+section.container {
+  padding: 150px 0 150px 0 !important;
+}
+
+/* global */
+
+/* sections */
+
+.site-header {
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+  color: rgba(0, 0, 0, .85);
+  text-decoration: none;
+}
+
+nav {
+  color: white;
+}
+
+.nav-color {
+  background-color: black;
+}
+
+a.nav-link:hover {
+  color: #999 !important;
+}
+
+a.logo {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+a.logo:hover {
+  color: white !important;
+}
+
+li.nav-item {
+  font-size: 1.5rem;
+}
+
+a.nav-link:hover {
+  color: black;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#cities {
+  padding-top: 50px !important;
+  padding-bottom: 0 !important;
+}
+
+.aqpost{
+  border: 1px solid inherit;
+  height: auto;
+  width: 100px !important;
+  border-radius: 10px;
+  margin: 0 5px 0 5px;
+  padding: 10px 0 10px 0;
+}
+
+/* About Us Section */
+#about-us {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  background: white;
+}
+
+#text {
+  height: 100%;
+  width: 100%;
+}
+
+.big-text {
+  font-weight: bold !important;
+  font-size: 4rem;
+}
+
+#text p {
+  font-size: 1.75rem;
+}
+/* About Us Section */
+
+/* taiwan-info section */
+.img-container {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.img-container img {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* taiwan-info section */
+
+/* post sections */
+#post {
+  background-color: #e6e6e6;
+  padding: 0;
+}
+
+#posting-area {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#post-on-ptt {
+  display: flex;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* post sections */
+
+/* footer section */
+.foot {
+  padding: 2.5rem 0;
+  color: white;
+  text-align: center;
+  background-color: #242930;
+}
+
+.foot p {
+  font-size: 1.25rem !important;
+}
+
+.foot p:last-child {
+  margin-bottom: 0;
+}
+
+.foot p a{
+  text-decoration: none;
+  color: white;
+}
+
+.foot p a:hover {
+  color: #999;
+}
+/* footer section */

@@ -1,0 +1,93 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light nav-color">
+  <a class="navbar-brand text-light logo" href="#">ap/buster</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#post">Post On PTT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#about-us">About Us<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section class="container text-center" id='cities'>
+  <div class="row aqposts">
+    {% for post in posts %}
+    <div class="col col-xs col-sm aqpost">
+      <h3 class='post-name'>{{ post.SiteName }}</h3>
+      <h3 class='post-aqi'>{{ post.PM2_5 }}</h3>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="container-fluid text-center" id='taiwan-info'>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="img-container">
+        <img src="{% static 'website/images/taiwan.png' %}" height="500vh" width="auto" alt="taiwan air pollution">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid text-center" id='post'>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div id="text">
+        <p>We are encouraging everyone
+          to share this information to
+          people around you to know and discuss it.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <h1 class='big-text'>POST IT ON PTT</h1>
+      <div id="posting-area">
+        <form method="post" action='test'>
+          <textarea type="text" name="caption" class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 90%; height: 200px; margin-left: auto; margin-right: auto;">{{ text }}</textarea>
+          {% csrf_token %}
+          <input type="submit" class="btn btn-primary" id='post-on-ptt' value="Post" onclick="alert('POST ON PTT SUCCESS!!')" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid text-center" id='about-us'>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class='my-auto' id='text'>
+        <h1 class='big-text'>Who are we?</h1>
+        <p>We're just a group of students from NTHU.
+          We're here to increase the awareness of air quality
+          among us, especially in Taiwan.</p>
+      </div>
+    </div>
+    <div class="col-md-8 mx-auto">
+      <img class='img-fluid' src="{% static 'website/images/pol1.jpg' %}" alt="">
+    </div>
+  </div>
+</section>
+
+<footer class='foot'>
+  <p><a href='#post'>Post on PTT</a></p>
+  <p><a href='#about-us'>About Us</a></p>
+  <p><strong>
+      <>
+    </strong> with &hearts; by <strong>ap/buster</strong></p>
+</footer>
+
+<script src="{% static 'website/js/index.js' %}"></script>
+{% endblock content %}
